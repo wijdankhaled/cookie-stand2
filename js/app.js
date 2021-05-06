@@ -113,6 +113,7 @@ for (let i=0;i<locationarr.length;i++){
   }
   makefooter();
   //------------------------------------------------------------------------------
+  /*
 let form=document.getElementById('shopform');
 let locname=form.shopinput;
 let Mincust=form.mininput;
@@ -161,4 +162,6 @@ let avgcookie =form.avginput;
        }
     }
     newlocation.creatfoter();
-  })
+  })*/
+
+  
