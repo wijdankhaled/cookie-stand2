@@ -113,55 +113,25 @@ for (let i=0;i<locationarr.length;i++){
   }
   makefooter();
   //------------------------------------------------------------------------------
-  /*
-let form=document.getElementById('shopform');
-let locname=form.shopinput;
-let Mincust=form.mininput;
-let maxcust=form.maxinput;
-let avgcookie =form.avginput;
-
-  
-  form.addEventListener('submit',function (event) {
-    event.preventDefault();
-    let newlocation=new Location(locname.value,Mincust.value,maxcust.value,avgcookie.value);
-    locationarr.push(newlocation);
-
-    newlocation.calccuseachhour();
-    newlocation.cookiesechhour();
-    let row =document.createElement('tr');
-    table.appendChild(row);
-
-    let hrow=document.createElement('th');
-    row.appendChild(hrow);
-    hrow.textContent=newlocation.locname;
-    for (let i=0;i<hours.length;i++){
-        let tdelement=document.createElement('td');
-        datarow.appendChild(tdelement);
-        datarow.textContent=newlocation.cookiesechhour[i];
-    }
-    let totaldata =document.createElement('td');
-    datarow.appendChild(totaldata);
-    totaldata.textContent=newlocation.totalsales;
-
-
-
-    function creatfoter () {
-        let footertable=document.createElement('tr');
-       table.appendChild(footertable);
-       let footerth=document.createElement('th');
-       footertable.appendChild(footerth);
-       footerth.textContent='total';
-       for (let i=0;i<hours.length;i++){
-         let totaleachhour=0;
-         for(let j=0;j<locationarr.length;j++){
-      totaleachhour+=newlocation.cookiesechhour[i];
-         }
-         let footertotal=document.createElement('th');
-         footertable.appendChild(footertotal);
-         footertotal.textContent=totaleachhour;
-       }
-    }
-    newlocation.creatfoter();
-  })*/
+ 
+let shopform =document.getElementById('shopform');
+shopform.addEventListener('submit',submitter);
+function submitter(event){
+  event.preventDefault();
+  table.deleteRow(table.rows.length-1);
+let locname=event.target.shopinput.value;
+let mincust=event.target.mininput.value;
+let maxcust=event.target.maxinput.value;
+let avgcookie =event.target.avginput.value;
+ 
+let newLocation=new Location(locname,mincust,maxcust,avgcookie,[],[],0);
+newLocation.calccuseachhour();
+newLocation.calccookieseachhour();
+newLocation.render();
+makefooter();
+document.getElementById('shopform').reset();
+console.log(newLocation);
+}
+makefooter();
 
   
