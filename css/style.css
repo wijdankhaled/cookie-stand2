@@ -50,4 +50,23 @@ main ol li{
     font-weight: bold;
 }
 
+#shopform{
+   color: #34656d;
+   background-color: #c6ffc1;
+}
+#shopform input{
+  background-color: #34656d;
+  border: black;
+}
+button{
+    background-color: #34656d;
+    color: #c6ffc1;
+  
 
+}
+h1{
+    color:#c6ffc1 ;
+}
+a{
+    color:#c6ffc1 ;  
+}
