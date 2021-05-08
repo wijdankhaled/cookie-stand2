@@ -101,6 +101,22 @@ totaleachhour+=locationarr[j].cookiesechhour[i];
    footertotal.textContent=totaleachhour;
  }
 
+ //-------------------------------------------------------------
+ /*
+for(let i=0;i<locationarr.length;i++){
+  let datarow=document.createElement('tr');
+  table.appendChild(datarow);
+  for(let j=0;j<hours.length;j++){
+   
+
+    let totaldata =document.createElement('td');
+    datarow.appendChild(totaldata);
+    datarow+=totaldata;
+    datarow.textContent=datarow;
+  }
+}
+*/
+//-----------------------------------------------------------------
 }
 
 for (let i=0;i<locationarr.length;i++){
@@ -133,5 +149,6 @@ document.getElementById('shopform').reset();
 console.log(newLocation);
 }
 makefooter();
+
 
   
