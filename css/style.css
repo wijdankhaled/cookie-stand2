@@ -18,6 +18,8 @@ nav ul li a{
     text-decoration: none;
     color: #c6ffc1;
     font-weight: bold;
+    font-family:Georgia;
+   
 }
 #salmon{
     width: 90%;
@@ -25,6 +27,8 @@ nav ul li a{
 .setimag1 img {
     padding: 20px;
     margin: 20px;
+    width: 300px;
+    height: 360px;
 }
 #imagefamily{
     width: 100%;
@@ -34,24 +38,29 @@ nav ul li a{
 .setimag2 img{
     padding: 20px;
     margin: 20px;
+    width: 400px;
+    height: 360px;
 }
 h3{
     background-color:#c6ffc1 ;
+    font-family: 'Zilla Slab Highlight', cursive;
 
 }
   #p1{
 
 color: #c6ffc1;
 font-weight: bold;
+font-family: 'Zilla Slab Highlight', cursive;
 }
 
 main ol li{
     color: #c6ffc1;
     font-weight: bold;
+    font-family: 'Zilla Slab Highlight', cursive;
 }
 
 #shopform{
-   color: #34656d;
+   color: black;
    background-color: #c6ffc1;
 }
 #shopform input{
@@ -66,7 +75,21 @@ button{
 }
 h1{
     color:#c6ffc1 ;
+    
 }
 a{
     color:#c6ffc1 ;  
+    
 }
+table ,th,td{
+    border: 1px solid black;
+}
+table{
+    margin: 40px;
+}
+#inputbox{
+    width: 730px;
+    height: 730px;
+    padding-left: 30px;
+}
+
