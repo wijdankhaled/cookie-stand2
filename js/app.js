@@ -49,6 +49,7 @@ let theparent = document.getElementById('parent');
 
 let table = document.createElement('table');
 theparent.appendChild(table);
+table.setAttribute('id','table2')
 // make header
 function makeheder() {
   let hrow = document.createElement('tr');
@@ -130,25 +131,26 @@ for (let i=0;i<locationarr.length;i++){
   makefooter();
   //------------------------------------------------------------------------------
  
-let shopform =document.getElementById('shopform');
-shopform.addEventListener('submit',submitter);
-function submitter(event){
-  event.preventDefault();
-  table.deleteRow(table.rows.length-1);
-let locname=event.target.shopinput.value;
-let mincust=event.target.mininput.value;
-let maxcust=event.target.maxinput.value;
-let avgcookie =event.target.avginput.value;
- 
-let newLocation=new Location(locname,mincust,maxcust,avgcookie,[],[],0);
-newLocation.calccuseachhour();
-newLocation.calccookieseachhour();
-newLocation.render();
-makefooter();
-document.getElementById('shopform').reset();
-console.log(newLocation);
-}
-makefooter();
+  let shopform =document.getElementById('shopform');
+  shopform.addEventListener('submit',submitter);
+  function submitter(event){
+    event.preventDefault();
+   
+  let locname=event.target.shopinput.value;
+  let mincust=event.target.mininput.value;
+  let maxcust=event.target.maxinput.value;
+  let avgcookie =event.target.avginput.value;
+   
+  let newLocation=new Location(locname,mincust,maxcust,avgcookie);
+  let newtable=document.getElementById('table2');
+  newtable.removeChild(newtable.lastChild);
+  newLocation.calccuseachhour();
+  newLocation.calccookieseachhour();
+  newLocation.render();
+  shopform.reset();
+  makefooter();
+  
+  }
 
 
   
