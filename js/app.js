@@ -131,6 +131,7 @@ for (let i=0;i<locationarr.length;i++){
   makefooter();
   //------------------------------------------------------------------------------
  
+
   let shopform =document.getElementById('shopform');
   shopform.addEventListener('submit',submitter);
   function submitter(event){
@@ -151,6 +152,7 @@ for (let i=0;i<locationarr.length;i++){
   makefooter();
   
   }
+
 
 
   
