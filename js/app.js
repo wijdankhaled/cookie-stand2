@@ -131,26 +131,27 @@ for (let i=0;i<locationarr.length;i++){
   makefooter();
   //------------------------------------------------------------------------------
  
-let shopform =document.getElementById('shopform');
-shopform.addEventListener('submit',submitter);
-function submitter(event){
-  event.preventDefault();
- 
-let locname=event.target.shopinput.value;
-let mincust=event.target.mininput.value;
-let maxcust=event.target.maxinput.value;
-let avgcookie =event.target.avginput.value;
- 
-let newLocation=new Location(locname,mincust,maxcust,avgcookie);
-let newtable=document.getElementById('table2');
-newtable.removeChild(newtable.lastChild);
-newLocation.calccuseachhour();
-newLocation.calccookieseachhour();
-newLocation.render();
-shopform.reset();
-makefooter();
 
-}
+  let shopform =document.getElementById('shopform');
+  shopform.addEventListener('submit',submitter);
+  function submitter(event){
+    event.preventDefault();
+   
+  let locname=event.target.shopinput.value;
+  let mincust=event.target.mininput.value;
+  let maxcust=event.target.maxinput.value;
+  let avgcookie =event.target.avginput.value;
+   
+  let newLocation=new Location(locname,mincust,maxcust,avgcookie);
+  let newtable=document.getElementById('table2');
+  newtable.removeChild(newtable.lastChild);
+  newLocation.calccuseachhour();
+  newLocation.calccookieseachhour();
+  newLocation.render();
+  shopform.reset();
+  makefooter();
+  
+  }
 
 
 
